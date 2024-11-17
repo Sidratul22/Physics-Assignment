@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   float m1=3,w1=530*1e-9,w2=700*1e-9,t1=65,m2=2,d,t2;
+
+   printf("m1=3 \nm2=2\nWave Length= 530 nm (Green)\n");
+   printf("First Angle= 65 degree \nWave Length= 700 nm (Red)\nSecond Angle = ?\n");
+   d=(m1 * w1)/sin(t1/57.295);
+   t2=asin(m2 * w2/d);
+   printf("\nSecond Angle= %.2f Degree\n",t2*57.295);
+   return 0;
+}
