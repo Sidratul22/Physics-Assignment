@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{         double a1,a2,a3,m,wl,t1,t2,t3;
+
+          printf("a1= ");
+          scanf("%lf",&a1);
+          printf("a2= ");
+          scanf("%lf",&a2);
+          printf("a3= ");
+          scanf("%lf",&a3);
+          printf("m= ");
+          scanf("%lf",&m);
+          printf("Wave Length= ");
+          scanf("%lf",&wl);
+          if(wl<380 || wl>750)
+          {
+              printf("Out of the range. Please enter a valid number.\n");
+              return 0;
+          }
+   t1=asin((m*wl*1e-9)/(a1*1e-6));
+   printf("\nFirst Angle = %.2lf degree\n",t1*57.29);
+   t2=asin((m*wl*1e-9)/(a2*1e-6));
+   printf("Second Angle = %.2lf degree\n",t2*57.29);
+   t3=asin((m*wl*1e-9)/(a3*1e-6));
+   printf("Third Angle = %.2lf degree\n",t3*57.29);
+
+    if(t1>t2 && t1>t3)
+   {
+            printf("\na1 slit bent the light most\n");
+   }
+   else if(t2>t1 && t2>t3)
+   {
+            printf("\na2 slit bent the light most\n");
+   }
+
+   else {printf("\na3 slit bent the light most\n");}
+   return 0;
+
+}
